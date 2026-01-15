@@ -12,18 +12,72 @@
 
 <body>
 
-    <header class="p-4 bg-gray-100 pb-20 h-full">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <div>
-                <img src="/assets/images/footer-logo.svg" alt="">
+    <header class="md:p-4 bg-gray-100 pb-20 h-full">
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <nav class="flex justify-between items-center p-4 md:max-w-7xl md:mx-auto">
+                <a href="/">
+                    <img  src="/assets/images/footer-logo.svg" alt="Phumela Logo">
+                </a>
+
+                <ul class="hidden md:block">
+                    <li><a href="#" class="hover:underline">About us</a></li>
+                    <li><a href="#" class="hover:underline">Our mission</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+
+                <button id="mobile-menu-btn" class="md:hidden pr-5" onclick="">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            <div id="mobile-dropdown" class="fixed inset-0 bg-white z-50 md:hidden flex flex-col hidden">
+                <button id="close-menu" class="absolute top-10 right-9" onclick="">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+                <ul class="flex flex-col p-4 ">
+                    <a href="/">
+                        <img src="/assets/images/footer-logo.svg" alt="Phumela Logo">
+                    </a>
+                    <div class="mt-12">
+                        <li class="pb-5"><a href="#" class="hover:underline text-lg">Home</a></li>
+                        <li class="pb-5"><a href="#" class="hover:underline text-lg">About us</a></li>
+                        <li class="pb-5"><a href="#" class="hover:underline text-lg">Our mission</a></li>
+                        <li class="pb-5"><a href="#" class="hover:underline text-lg">Contact</a></li>
+                    </div>
+                </ul>
             </div>
-            <ul>
-                <li><a href="#" class="hover:underline">About us</a></li>
-                <li><a href="#" class="hover:underline">Our mission</a></li>
-                <li><a href="#" class="hover:underline">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 p-4">
             <div class="w-full flex flex-col justify-center">
                 <h1 class="text-3xl font-semibold md:font-bold md:w-3/4 md:text-5xl">Phumelela is a non-profit
                     organization that aims to provide
@@ -42,7 +96,7 @@
     </header>
 
     <main>
-       
+
         <section class="max-w-7xl mx-auto my-10 px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 justify-between align-center my-2 gap-4 border-b py-5 md:py-10">
                 <h2 class="text-3xl md:text-4xl">What we do</h2>
@@ -91,7 +145,8 @@
                     <div class="w-full h-full bg-white p-8 flex flex-col justify-center">
                         <span class="uppercase text-xs ">Our mission</span>
                         <p class="text-lg md:text-3xl tracking-tight mt-5 font-medium">
-                            To support children from under-resourced communities by providing the care, guidance, and opportunities they need to achieve their full potential.
+                            To support children from under-resourced communities by providing the care, guidance, and
+                            opportunities they need to achieve their full potential.
                         </p>
                         <div class="mt-6">
                             <button href="#"
@@ -141,51 +196,56 @@
         <section class="bg-blue-100">
             <div class="max-w-7xl mx-auto px-4 py-10">
                 <div class="grid md:grid-cols-2 gap-6 items-center py-10">
-                <div>
-                    <img src="/assets/images/frank.jpg" alt="Contact us illustration">
-                </div>
-                <div class="flex flex-col">
-                     <p class="text-2xl md:text-3xl tracking-tight mb-6">Have questions or want to get involved? Reach out
-                        to us!</p>
-                    <form action="https://formspree.io/f/mnjjnavo" method="POST">
-                        <label class="block mb-4">
-                            Full names
-                            <input class="block w-full py-3 border-b border-zinc-500 outline-none bg-transparent" type="text"
-                                name="name" required>
-                        </label>
-                        <label class="block mb-4">
-                            Email address
-                            <input class="block w-full py-3 border-b border-zinc-500 outline-none bg-transparent" type="email"
-                                name="email">
-                        </label>
-                        <label class="block mb-4">
-                            Contact number
-                            <input class="block w-full py-3 border-b border-zinc-500 outline-none bg-transparent text-zinc-400"  type="tel"
-                                name="phone">
-                        </label>
-                        <label>
-                            State your interest
-                            <select class="block w-full border-b border-zinc-500 py-5 px-0 text-gray-400 bg-transparent outline-none mb-4 my-4" name="interest">
-                                <option value="volunteering">Volunteering</option>
-                                <option value="donations">Donations</option>
-                                <option value="partnerships">Partnerships</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </label>
+                    <div>
+                        <img src="/assets/images/frank.jpg" alt="Contact us illustration">
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-2xl md:text-3xl tracking-tight mb-6">Have questions or want to get involved?
+                            Reach out
+                            to us!</p>
+                        <form action="https://formspree.io/f/mnjjnavo" method="POST">
+                            <label class="block mb-4">
+                                Full names
+                                <input class="block w-full py-3 border-b border-zinc-500 outline-none bg-transparent"
+                                    type="text" name="name" required>
+                            </label>
+                            <label class="block mb-4">
+                                Email address
+                                <input class="block w-full py-3 border-b border-zinc-500 outline-none bg-transparent"
+                                    type="email" name="email">
+                            </label>
+                            <label class="block mb-4">
+                                Contact number
+                                <input
+                                    class="block w-full py-3 border-b border-zinc-500 outline-none bg-transparent text-zinc-400"
+                                    type="tel" name="phone">
+                            </label>
+                            <label>
+                                State your interest
+                                <select
+                                    class="block w-full border-b border-zinc-500 py-5 px-0 text-gray-400 bg-transparent outline-none mb-4 my-4"
+                                    name="interest">
+                                    <option value="volunteering">Volunteering</option>
+                                    <option value="donations">Donations</option>
+                                    <option value="partnerships">Partnerships</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </label>
 
-                        </label>
-                        <label class="block my-4">
-                            Your message
-                            <textarea class="block w-full py-3 border-b border-zinc-500 outline-none bg-transparent"
-                                name="message"></textarea>
-                        </label>
-                        <!-- your other form fields go here -->
-                        <button class="inline-block font-semibold text-md border border-black px-6 py-3 mt-2" type="submit">Send your enquiry</button>
-                    </form>
+                            </label>
+                            <label class="block my-4">
+                                Your message
+                                <textarea class="block w-full py-3 border-b border-zinc-500 outline-none bg-transparent"
+                                    name="message"></textarea>
+                            </label>
+                            <!-- your other form fields go here -->
+                            <button class="inline-block font-semibold text-md border border-black px-6 py-3 mt-2"
+                                type="submit">Send your enquiry</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            </div>
-            
+
         </section>
     </main>
 
